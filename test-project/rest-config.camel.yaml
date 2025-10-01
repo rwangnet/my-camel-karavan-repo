@@ -13,3 +13,21 @@
         to: direct:mainRoute
         produces: application/json
         routeId: rest-route
+- route:
+    id: route-2875
+    nodePrefixId: route-430
+    from:
+      id: from-da74
+      uri: direct
+      parameters:
+        name: mainRoute
+      steps:
+        - log:
+            id: log-67f0
+            message: Entrando a la ruta principal
+            loggingLevel: INFO
+        - process:
+            id: process-d085
+            description: Initial Processor
+            disabled: false
+            ref: simpleBean
