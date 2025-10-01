@@ -1,0 +1,15 @@
+- restConfiguration:
+    component: platform-http
+    scheme: http
+    port: "8080"
+    apiContextPath: /api
+    bindingMode: json
+- rest:
+    id: rest-d116
+    post:
+      - id: post-58e3
+        description: operacion dummy
+        path: /dummyPostOp
+        to: direct:mainRoute
+        produces: application/json
+        routeId: rest-route
